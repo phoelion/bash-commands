@@ -1,0 +1,5 @@
+title:
+	copy the passwd file, remove your username from the copy file by sed command
+	
+Command:
+	cat passwd | sed '/phoelion/d' 
