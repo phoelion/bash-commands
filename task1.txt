@@ -1,0 +1,10 @@
+title:
+	read passwd file content with cat, then
+	1: Use `xargs` to `md5` each line
+	2: Use `while` to `base64` each line
+	3: Use `while` and `grep` to show only user’s **without** bash access
+	
+Command:
+	1: cat /etc/passwd | xargs -I {} bash -c 'echo -n "{}" | md5sum'
+	2: cat /etc/passwd | cat /etc/passwd | while read -r line; do echo -n "$line" | base64; done;
+	3: cat /etc/passwd | while read -r line; do echo $line|grep -v bash; done;
